@@ -1,73 +1,4 @@
     /* Basic design */
-body {
-    font-family: Helvetica, sans-serif
-}
-        /* --header, hero-- */
-.header {
-    background-color: #460c14;
-    color: #f9faf8;
-    padding: 0 16px;
-}
-.header .logo {
-    font-size: 24px;
-    font-weight: 550;
-}
-.header .link, .hero .secondary {
-    color: #e5e7eb;
-    font-size: 18px;
-}
-
-.hero {
-    background-color: #53111a;
-}
-.hero .main {
-    color: #f9faf8;
-    font-size: 48px;
-    font-weight: 900;
-}
-.hero .schedule{
-    background-color: #380008;
-    border-radius: 4px;
-    box-shadow: 0px 3px 5px #ffffff2f;
-    color: #e5e7eb;
-}
-.hero img {
-    box-shadow: 8px 5px 8px #180303a4;
-}
-
-        /* --info-- */
-.heading {
-    font-size: 36px;
-    font-weight: 900;
-}
-.info-img {
-    width: 150px; 
-    height: 150px;
-    border-radius: 5px;
-    box-shadow: 3px 3px 5px #180303a4;
-}
-.info-text {
-    font-size: 18px;
-}
-
-        /* --quote box-- */
-.quote-box {
-    background-color: #f7e6dd;
-}
-.quote {
-    font-size: 25px;
-    font-weight: 100;
-    letter-spacing: 1px;
-    font-style: italic;
-    text-align: left;
-    color: #1f2937;
-}
-.person {
-    font-size: 24px;
-    font-weight: 900;
-    font-style: italic;
-}
-        /* --other-- */
 ul {
     list-style: none;
     padding: 0;
@@ -77,25 +8,42 @@ li {
 }
 
 
-
-
-
-    /* Arrangement */
+    /* Main */
 body {
+    font-family: Helvetica, sans-serif;
     margin: 0;
 }
-        /* --header-- */
-.header, .list, .link {
+        /* --header, footer-- */
+.header, .footer .list, .list, .link {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.header .link, .footer .link, .hero .secondary {
+    color: #e5e7eb;
+    font-size: 18px;
+}
+.header .logo {
+    font-size: 24px;
+    font-weight: 550;
+}
 .link {
     margin-left: 16px;
+}
+.header, .footer .list {
+    background-color: #460c14;
+    color: #f9faf8;
+
+    padding: 0 16px;
+}
+.footer .list {
+    margin: 0;
+    padding: 16px
 }
 
         /* --hero-- */
 .hero {
+    background-color: #53111a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,6 +60,10 @@ body {
     align-items: center;
 }
 .hero .main {
+    color: #f9faf8;
+    font-size: 48px;
+    font-weight: 900;
+
     text-align: left;
     margin-bottom: 32px;
 }
@@ -120,17 +72,27 @@ body {
     padding-right: 12px;
 }
 .hero .schedule {
+    background-color: #380008;
+    border-radius: 4px;
+    box-shadow: 0px 3px 5px #ffffff2f;
+    color: #e5e7eb;
+
     margin-right: 12px;
 }
-
+.hero img {
+    box-shadow: 8px 5px 8px #180303a4;
+}
 
       /* --info-- */
 .info {
-    padding: 32px 0 100% 0;
+    padding-top: 32px;
     text-align: center;
     background-color: #fff6f4;
 }
 .heading {
+    font-size: 36px;
+    font-weight: 900;
+
     margin-bottom: 32px;
 }
 .info-buttons {
@@ -142,12 +104,23 @@ body {
 .buttons {
     max-width: 150px;
 }
+.info-img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #180303a4;
+}
 .info-text {
+    font-size: 18px;
+
     margin-top: 16px;
 }
 
         /* --quote box-- */
+
 .quote-box {
+    background-color: #f7e6dd;
+
     padding: 64px;
     display: flex;
     justify-content: center;
@@ -157,7 +130,66 @@ body {
     flex-direction: column;
     max-width: 800px;
 }
+.quote {
+    font-size: 25px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-style: italic;
+    text-align: left;
+    color: #1f2937;
+}
 .person {
+    font-size: 24px;
+    font-weight: 900;
+    font-style: italic;
+
     align-self: flex-end;
     margin-right: 50px;
+}
+
+        /* --call to action-- */
+.cta {
+    display: flex;
+    justify-content: center;
+}
+.cta-all {
+    background-color: #53111a;
+    border-radius: 16px;
+    min-width: 700px;
+    margin: 64px 0;
+    padding: 16px 0;
+
+    display: flex;
+    justify-content: space-around;
+    flex: 0 1 1000px;
+}
+.cta-left { 
+    text-shadow: 2px 2px #180004;
+
+    display: flex;
+    flex-direction: column;
+}
+.cta-main, .cta-secondary  {
+    color: #f7e6dd;
+    padding: 0;
+    margin: 0;
+}
+.cta-main {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+.cta-secondary {
+    font-family: monospace;
+    font-size: 18px;
+}
+.cta-links {
+    font-family: monospace;
+    font-size: 18px;
+    letter-spacing: 3px;
+    background-color: #f7e6dd;
+    box-shadow: 1px 3px 5px #ffffff2f;
+    padding: 1px 32px;
+
+    align-self: center;
 }
